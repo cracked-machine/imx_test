@@ -12,7 +12,8 @@ jobs:
     container:
       image: 'ghcr.io/cracked-machine/yocto_imx:ubuntu2204'
     steps:
-      - uses: actions/checkout@v3
+      - name: Check out code
+        uses: actions/checkout@v3
       - name: build linux 
         run: cat README.md
           
