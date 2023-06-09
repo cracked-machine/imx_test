@@ -16,7 +16,7 @@ jobs:
       - name: build linux 
         run: |
           cd imx_yocto_bsp
-          pwd
+          ls -la
           ./setup-environment
           DISTRO=fsl-imx-fb MACHINE=imx6ulevk source imx-setup-release.sh -b /workspaces/imx_test/imx_yocto_bsp/build
           bitbake core-image-base
