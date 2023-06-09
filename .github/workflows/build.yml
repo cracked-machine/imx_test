@@ -14,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: build linux 
-        run: cd imx_yocto_bsp && ls -la && setup-environment
+        run: cat README.md
           
           
 # setup-environment
