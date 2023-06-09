@@ -8,7 +8,9 @@ on:
 jobs:
   # "yocto_core" package settings must have "embedded_linux_dockerfiles" added as a source repository with write permissions
   build_yocto_core:
-    runs-on: ghcr.io/cracked-machine/yocto_imx:ubuntu2204
+    runs: 
+      using: 'docker'
+      image: ghcr.io/cracked-machine/yocto_imx:ubuntu2204
     steps:
       - uses: actions/checkout@v3
       - name: build linux 
