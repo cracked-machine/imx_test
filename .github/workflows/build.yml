@@ -22,9 +22,5 @@ jobs:
           cd imx_yocto_bsp
           repo init -u https://github.com/nxp-imx/imx-manifest -b imx-linux-langdale -m imx-6.1.1-1.0.0.xml
           repo sync
-          ls -al
-          ls -al sources/base
           ./setup-environment
-          ./imx-setup-release.sh -b build
-          ./bitbake core-image-base
-      
+          
