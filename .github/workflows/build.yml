@@ -15,10 +15,9 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v3
       - name: build linux 
-        run: cat README.md
-          
-          
-# setup-environment
-# DISTRO=fsl-imx-fb MACHINE=imx6ulevk source imx-setup-release.sh -b /workspaces/imx_test/imx_yocto_bsp/build
-# bitbake core-image-base
+        run: |
+          cd imx_yocto_bsp
+          setup-environment
+          DISTRO=fsl-imx-fb MACHINE=imx6ulevk source imx-setup-release.sh -b /workspaces/imx_test/imx_yocto_bsp/build
+          bitbake core-image-base
       
