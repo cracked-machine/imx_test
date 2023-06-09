@@ -4,3 +4,4 @@ imx_yocto_bsp/build/sstate-cache
 imx_yocto_bsp/downloads
 imx_yocto_bsp/.repo
 imx_yocto_bsp/build/bitbake-cookerdaemon.log
+.vscode-ctags
