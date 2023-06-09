@@ -22,6 +22,6 @@ jobs:
           ls -al
           ls -al sources/base
           ./setup-environment
-          DISTRO=fsl-imx-fb MACHINE=imx6ulevk source ./imx-setup-release.sh -b /workspaces/imx_test/imx_yocto_bsp/build
+          DISTRO=fsl-imx-fb MACHINE=imx6ulevk source ./imx-setup-release.sh -b build
           ./bitbake core-image-base
       
