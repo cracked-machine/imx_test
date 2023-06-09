@@ -1,0 +1,3 @@
+[submodule ".devcontainer/embedded_linux_dockerfiles"]
+	path = .devcontainer/embedded_linux_dockerfiles
+	url = https://github.com/cracked-machine/embedded_linux_dockerfiles.git
