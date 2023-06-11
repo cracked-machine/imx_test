@@ -16,7 +16,7 @@ jobs:
       image: 'ghcr.io/cracked-machine/yocto_imx:ubuntu2204'
     steps:
       - name: Check out code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v1
       - name: test
         run: echo hello
       # - name: build linux 
