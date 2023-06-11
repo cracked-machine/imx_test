@@ -17,10 +17,11 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@v3
-      - name: build linux 
-        run: |
-          cd imx_yocto_bsp
-          repo init -u https://github.com/nxp-imx/imx-manifest -b imx-linux-langdale -m imx-6.1.1-1.0.0.xml
-          repo sync
-          ./setup-environment
+        run: echo hello
+      # - name: build linux 
+      #   run: |
+      #     cd imx_yocto_bsp
+      #     repo init -u https://github.com/nxp-imx/imx-manifest -b imx-linux-langdale -m imx-6.1.1-1.0.0.xml
+      #     repo sync
+      #     ./setup-environment
           
