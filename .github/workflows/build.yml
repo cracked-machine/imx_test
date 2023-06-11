@@ -15,15 +15,7 @@ jobs:
     container:
       image: 'ghcr.io/cracked-machine/yocto_imx:ubuntu2204'
     steps:
-      - name: test node
-        run: |
-           echo "Checking for a usable node in /__e/node"
-           for f in /__e/node*/bin/node; do
-               echo "Testing: $f --version";
-               $f --version || echo "$f does not work, exit status: $?"
-           done
-      - name: Check out code
-        uses: actions/checkout@v3
+
       - name: test
         run: echo hello
       # - name: build linux 
