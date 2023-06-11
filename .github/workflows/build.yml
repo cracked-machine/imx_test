@@ -6,7 +6,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  # "yocto_core" package settings must have "embedded_linux_dockerfiles" added as a source repository with write permissions
+  
   build:
     env:
       DISTRO: fsl-imx-fb
@@ -15,15 +15,16 @@ jobs:
     container:
       image: 'ghcr.io/cracked-machine/yocto_imx:ubuntu2204'
     steps:
-      - uses: actions/checkout@v1
+        # only v1 works within a self-hosted containerized actions-runner :(
+      - name: Checkout repository
+        uses: actions/checkout@v1
+        with:
+          submodules: 'true'
 
-      - name: test
-        run: echo hello
-      
-      # - name: build linux 
-      #   run: |
-      #     cd imx_yocto_bsp
-      #     repo init -u https://github.com/nxp-imx/imx-manifest -b imx-linux-langdale -m imx-6.1.1-1.0.0.xml
-      #     repo sync
-      #     ./setup-environment
+      - name: build linux 
+        run: |
+          cd imx_yocto_bsp
+          repo init -u https://github.com/nxp-imx/imx-manifest -b imx-linux-langdale -m imx-6.1.1-1.0.0.xml
+          repo sync
+          ./setup-environment
           
