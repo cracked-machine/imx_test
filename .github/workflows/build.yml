@@ -15,9 +15,11 @@ jobs:
     container:
       image: 'ghcr.io/cracked-machine/yocto_imx:ubuntu2204'
     steps:
+      - uses: actions/checkout@v3
 
       - name: test
         run: echo hello
+      
       # - name: build linux 
       #   run: |
       #     cd imx_yocto_bsp
