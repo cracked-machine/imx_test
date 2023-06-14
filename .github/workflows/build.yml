@@ -26,5 +26,5 @@ jobs:
           cd imx_yocto_bsp
           repo init -u https://github.com/nxp-imx/imx-manifest -b imx-linux-langdale -m imx-6.1.1-1.0.0.xml
           repo sync
-          # ./setup-environment
-          
+          ./setup-environment
+          DISTRO=fsl-imx-fb MACHINE=imx6ulevk source imx-setup-release.sh -b build
