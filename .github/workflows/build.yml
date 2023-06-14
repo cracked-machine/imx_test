@@ -22,6 +22,7 @@ jobs:
           submodules: 'true'
 
       - name: build linux 
+        shell: bash
         run: |
           set -x
           
